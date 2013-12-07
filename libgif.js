@@ -842,9 +842,9 @@ var SuperGif = function ( opts ) {
 	  stream = new Stream(h.responseText);
 	  setTimeout(doParse, 0);
         };
-        h.onprogress = function (e) {
-	  if (e.lengthComputable) doShowProgress(e.loaded, e.total, true);
-        };
+        // h.onprogress = function (e) {
+	//   if (e.lengthComputable) doShowProgress(e.loaded, e.total, true);
+        // };
         h.onerror = function() { doLoadError('xhr'); };
         h.open('GET', gif.getAttribute('rel:animated_src') || gif.src, true);
         h.send();
