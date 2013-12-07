@@ -789,11 +789,9 @@ var SuperGif = function ( opts ) {
     div.appendChild(canvas);
     div.appendChild(toolbar);
 
-    // if (!base64) {
     var parent = gif.parentNode;
     parent.insertBefore(div, gif);
     parent.removeChild(gif);
-    // }
 
     if (options.c_w && options.c_h) setSizes(options.c_w, options.c_h);
   };
