@@ -754,7 +754,7 @@ var SuperGif = function ( opts ) {
       // TODO: Is there much point in actually supporting iterations?
       NETSCAPE: withProgress(doNothing)
     },
-    img: withProgress(doImg, true),
+    img: withProgress(doImg),
     eof: function (block) {
       //toolbar.style.display = '';
       pushFrame();
