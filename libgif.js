@@ -464,14 +464,14 @@ var SuperGif = function ( opts ) {
   };
 
   var doText = function (text) {
-    toolbar.innerHTML = text; // innerText? Escaping? Whatever.
-    toolbar.style.visibility = 'visible';
+    // toolbar.innerHTML = text; // innerText? Escaping? Whatever.
+    // toolbar.style.visibility = 'visible';
   };
 
   var setSizes = function(w, h) {
     canvas.width = w * get_canvas_scale();
     canvas.height = h * get_canvas_scale();
-    toolbar.style.minWidth = ( w * get_canvas_scale() ) + 'px';
+    // toolbar.style.minWidth = ( w * get_canvas_scale() ) + 'px';
 
     tmpCanvas.width = w;
     tmpCanvas.height = h;
@@ -776,18 +776,18 @@ var SuperGif = function ( opts ) {
     var div = document.createElement('div');
     canvas = document.createElement('canvas');
     ctx = canvas.getContext('2d');
-    toolbar = document.createElement('div');
+    // toolbar = document.createElement('div');
 
     tmpCanvas = document.createElement('canvas');
 
     div.width = canvas.width = gif.width;
     div.height = canvas.height = gif.height;
-    toolbar.style.minWidth = gif.width + 'px';
+    // toolbar.style.minWidth = gif.width + 'px';
 
     div.className = 'jsgif';
-    toolbar.className = 'jsgif_toolbar';
+    // toolbar.className = 'jsgif_toolbar';
     div.appendChild(canvas);
-    div.appendChild(toolbar);
+    // div.appendChild(toolbar);
 
     var parent = gif.parentNode;
     parent.insertBefore(div, gif);
